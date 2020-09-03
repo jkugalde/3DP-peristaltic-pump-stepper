@@ -6,15 +6,15 @@ I made a very simple peristaltic pump, to be printed as fast as possible and wit
 
 A peristaltic pump is a good option when the fluid to pump is viscous, it is also very simple and clean, as the fluid is contained in a hose. The hose is pressed to push the fluid in one direction or the other with a circular motion. To eliminate friction that will try to displace the hose is that bearings are used to press, reducing the tangential force.
 
-<img src="/images/peris.png" width="500">
+<img src="/images/peris.png" width="400">
 
 This pump has to be attached to a NEMA 17, so the case dimensiones where restricted to a similar size, also a 5 mm axis with a D cut. With a gear box the system will work more smoothly, but it will complicate the things a little bit, so maybe i will do that in another version.
 
-<img src="/images/case.png" width="750">
+<img src="/images/case.png" width="400">
 
 I used the smallest bearings that i had, 3x10x4, in a triangular arrangement for the impeller, the bearing are press fit in the impeller, and the impeller is press fit in the shaft until the end of the D cut. The bearings should roll only on the hose and not in any other surface, because it will ad friciton.
 
-<img src="/images/impeller.png" width="750">
+<img src="/images/impeller.png" width="400">
 
 The lid is to prevent dust, broken fingers (naah) and to keep the hose in place if it tries to come out.
 
@@ -37,6 +37,8 @@ NEMA 17 | 1
 And a 4 mm soft hose, i think that i got mine from a medical drop counter.
 
 There are two version of the case, one with a mounting base holes and the other one smaller without this.
+
+The washer is to prevent friction from the impeller against the lid.
 
 # Manufacture
 
