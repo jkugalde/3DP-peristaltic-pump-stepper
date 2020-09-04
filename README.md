@@ -36,40 +36,61 @@ NEMA 17 | 1
 
 And a 4 mm soft hose, i think that i got mine from a medical drop counter.
 
+<img src="/images/parts.png" width="400">
+
 There are two version of the case, one with a mounting base holes and the other one smaller without this.
 
-The washer is to prevent friction from the impeller against the lid.
+The washer is to prevent friction from the impeller against the lid. The distance from the end of the D cut to the stepper face may vary, so you may have to change the length of the impeller so it fits properly inside the case.
 
 # Manufacture
 
 ## 3D printing
 
-I printed the parts with PLA, 0.3 mm layer height and without supports nor raft. I think that the orientation is pretty obvious: by the flat side.
+I printed the parts with PLA, 0.3 mm layer height and without supports nor raft. The impeller is a small piece so you can print it slower and with smaller layers to get the bearing pins just right.
+
+<img src="/images/printed.png" width="400">
+
+I think that the orientation is pretty obvious: by the flat side. The files are in this repository, in [GrabCad](https://grabcad.com/library/3d-printed-peristaltic-pump-2) and also Thingiverse. It is important that you adjust the tolerances in the parts, as your printer may be different than mine.
+
+After printing remove any extra hair or leftovers and maybe cross the holes with drill bits.
 
 ## Assembly
 
 - Put the case on top of the stepper, the inner circle shoul fit tightly on the stepper. 
 
+<img src="/images/motorcase.png" width="400">
+
 - Push the bearings into the pins of the impeller, until the end of it.
+
+<img src="/images/tribear.png" width="400">
 
 - Press the impeller against the stepper shaft with the bearings facing down until the end of the D cut.
 
 - Pass the hose through one of the holes in the case and pull it gently with pliers until it comes out through the other hole. Turn the impeller with your hand to make way. Do not allow that the hose comes up.
 
+<img src="/images/hosein.png" width="400">
+
 - Close the pump with the lid and bolts.
+
+<img src="/images/done.png" width="400">
 
 
 # Tests
 
 ## Electronics
 
-A good option to control a stepper motor is to use a driver, and a better one if you are using an Arduino is using a shield with ports for a driver and write a simple code.
+A good option to control a stepper motor is to use a driver (like the A4988), and a better one if you are using an Arduino is using a shield (Arduino CNC Shield) with ports for a driver and write a simple code.
 
 I did not have any of this but a 3D printer with similar motors, so i plugged the pump to the X axis and used the printer interface to actuate the pump.
 
-## Moving glycerin
+## Moving glycerine
 
-yes
+First you have to prime the pump, which means to fill the hose with glycerine, you can do this submerging one of the ends in the fluid container, rotating the motor and sucking the other side until it comes out.
+
+I put some glycerine in a flask an actuated the motor, it works fine. I will upload a video when i have a different experimental setup than my 3d printer.
+
+<img src="/images/test.png" width="400">
+
 
 # Further work
 
