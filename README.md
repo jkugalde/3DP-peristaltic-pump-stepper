@@ -79,21 +79,44 @@ After printing remove any extra hair or leftovers and maybe cross the holes with
 
 ## Electronics
 
-A good option to control a stepper motor is to use a driver (like the A4988), and a better one if you are using an Arduino is using a shield (Arduino CNC Shield) with ports for a driver and write a simple code.
+A good option to control a stepper motor is to use a driver (like the A4988), and a better one if you are using an Arduino is to add a shield (like the Arduino CNC Shield) with ports for a driver and write a simple code.
 
-I did not have any of this but a 3D printer with similar motors, so i plugged the pump to the X axis and used the printer interface to actuate the pump.
-
-## Moving glycerine
-
-First you have to prime the pump, which means to fill the hose with glycerine, you can do this submerging one of the ends in the fluid container, rotating the motor and sucking the other side until it comes out.
-
-I put some glycerine in a flask an actuated the motor, it works fine. I will upload a video when i have a different experimental setup than my 3d printer.
+I did not have any of this but a 3D printer with similar motors, so i plugged the pump to the X axis and used the printer interface to actuate the pump and it worked, so i got some electronics later.
 
 <img src="/images/test.png" width="400">
 
+These are the electronics:
+
+Item                     | Quantity
+ ---------------------------   | ------------
+Arduino UNO | 1
+Arduino CNC Shield | 1
+Stepper Driver DRV8825 | 1
+12 V Power Source | 1
+Stepper Motor NEMA 17 | 1
+
+The model of the motor is 17HS4401, do not forget the connector wire and the Arduino USB cord. The wiring is pretty easy thanks to the shield, connect everything like the image is showing except for the motor.
+
+<img src="/images/electronics.png" width="400">
+
+Then, calibrate the driver with a screwdriver and a tester, i set the Vref to 0.3 V and the stepping to 1/32. There is a guide [here](https://e3d-online.dozuki.com/Guide/VREF+Calibration+guide+DRV+8825/94). Now plug the motor.
+
+## Software
+
+I wrote a simple program in Arduino, which asks how many ml of fluid the user desires (with the serial monitor), waits 5 sec and then transforms that into steps. There is a variable to control the speed and the constant that relates ml with steps that must be calibrated with experiments.
+
+
+## Setup
+
+I 3d printed a piece to hold the syringe backwards next to the flask with glycerine. Before testing you must prime the pump sucking the output side of the hose until glycerine comes out, or with a syringe.
+
+<img src="/images/setup.png" width="400">
+
+## Tests
+
+I did some calibrations to get a good relation ml/steps, the actual precision is enough for its purpose. The current firmware is in the src folder. There is also a video in the vid folder, where the pump is set to dispense 10 ml.
 
 # Further work
 
-- To get open loop volume control using an Arduino.
 - To make a bigger version for a a bigger hose.
 
