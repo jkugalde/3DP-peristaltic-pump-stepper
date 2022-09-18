@@ -2,6 +2,8 @@
 
 I made a very simple peristaltic pump, to be printed as fast as possible and with a few parts to do some tests with glycerine. It is attachable to a NEMA 17 stepper motors as it is part of a larger project where it must control dispensed volume.
 
+[Here](https://grabcad.com/library/3d-printed-peristaltic-pump-2) are the CAD files.
+
 # Design
 
 A peristaltic pump is a good option when the fluid to pump is viscous, it is also very simple and clean, as the fluid is contained in a hose. The hose is pressed to push the fluid in one direction or the other with a circular motion. To eliminate friction that will try to displace the hose is that bearings are used to press, reducing the tangential force.
